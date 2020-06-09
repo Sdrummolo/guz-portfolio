@@ -19,8 +19,7 @@ const GlobalStyle = createGlobalStyle`
     line-height: 1.2;
     -webkit-font-smoothing: antialiased;
     background-color: var(--bg-color);
-    min-height: 100vh;
-    max-height: ${props => (props.isOpen ? "100vh" : "auto")};
+    min-height: -webkit-fill-available;
     overflow: ${props => (props.isOpen ? "hidden" : "visible")};
   }
 

@@ -9,8 +9,8 @@ const MenuContainer = styled(animated.div)`
   right: 0;
   bottom: 0;
   height: 100%;
-  height: -moz-available; /* WebKit-based browsers will ignore this. */
-  height: -webkit-fill-available; /* Mozilla-based browsers will ignore this. */
+  height: -moz-available;
+  height: -webkit-fill-available;
   height: fill-available;
   width: 100%;
   z-index: 50;
