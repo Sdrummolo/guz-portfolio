@@ -1,6 +1,6 @@
-const React = require("react")
-const PortfolioState = require("./src/context/PortfolioState")
+import React from "react"
+import PortfolioState from "./src/context/PortfolioState"
 
-exports.wrapRootElement = ({ element }) => {
+export function wrapRootElement({ element }) {
   return <PortfolioState>{element}</PortfolioState>
 }
