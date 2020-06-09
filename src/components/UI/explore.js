@@ -26,6 +26,9 @@ const ExploreButton = styled.button`
 
   @media (max-width: 768px) {
     font-size: 0.7rem;
+    margin-left: -61.765px;
+    margin-top: -25px;
+    padding: 0.8rem 1.9rem;
   }
 `
 
