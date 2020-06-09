@@ -1,6 +1,7 @@
 import styled from "styled-components"
+import { animated } from "react-spring"
 
-const StyledNav = styled.nav`
+const StyledNav = styled(animated.nav)`
   position: absolute;
   top: 0;
   background-color: transparent;
@@ -9,7 +10,7 @@ const StyledNav = styled.nav`
   display: flex;
   justify-content: space-between;
   width: 100%;
-  z-index: ${props => props.zIndex};
+  z-index: 100;
 
   /* Logo */
   a {

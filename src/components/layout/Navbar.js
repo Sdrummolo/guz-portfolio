@@ -1,4 +1,5 @@
 import React from "react"
+import { useSpring } from "react-spring"
 import { Link } from "gatsby"
 import logo from "../../images/logo_large.png"
 import instagram from "../../images/instagram_white.png"
@@ -7,9 +8,15 @@ import linkedin from "../../images/linkedin_white.png"
 // Components
 import { StyledNav, Logo, Navigation, Socials } from "../UI/styled_Navbar"
 
-const Navbar = ({ zIndex }) => {
+const Navbar = () => {
+  const NavSpring = useSpring({
+    config: { duration: 1000 },
+    opacity: 1,
+    from: { opacity: 0 },
+  })
+
   return (
-    <StyledNav zIndex={zIndex}>
+    <StyledNav style={NavSpring}>
       <Logo>
         <Link to="/">
           <img src={logo} alt="Mattia Guzman" />

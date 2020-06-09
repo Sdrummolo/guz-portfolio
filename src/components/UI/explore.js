@@ -1,6 +1,7 @@
 import styled from "styled-components"
+import { animated } from "react-spring"
 
-const ExploreButton = styled.button`
+const ExploreButton = styled(animated.button)`
   color: #fff;
   position: absolute;
   top: 50%;
@@ -10,13 +11,13 @@ const ExploreButton = styled.button`
   z-index: 20;
   text-transform: uppercase;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 800;
   background-color: transparent;
   border: 3px solid #fff;
   padding: 1rem 2rem;
   cursor: pointer;
   border-radius: 30px;
-  transition: all 0.2s;
+  transition: background-color 0.2s, color 0.2s;
   outline: none;
 
   &:hover {
@@ -29,6 +30,7 @@ const ExploreButton = styled.button`
     margin-left: -61.765px;
     margin-top: -25px;
     padding: 0.8rem 1.9rem;
+    border: 2px solid #fff;
   }
 `
 

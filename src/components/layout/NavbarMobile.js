@@ -1,5 +1,6 @@
 import React, { useContext } from "react"
 import { Link } from "gatsby"
+import { useSpring } from "react-spring"
 import PortfolioContext from "../../context/PortfolioContext"
 import logo from "../../images/logo_large.png"
 
@@ -8,12 +9,18 @@ import { HamburgerSpin } from "react-animated-burgers"
 import { StyledNav, BurgerWrapper, MobileLogo } from "../UI/styled_NavbarMobile"
 import MenuMobile from "./MenuMobile"
 
-const NavbarMobile = ({ zIndex }) => {
+const NavbarMobile = () => {
   const { isOpen, setIsOpen } = useContext(PortfolioContext)
+
+  const NavSpring = useSpring({
+    config: { duration: 1000 },
+    opacity: 1,
+    from: { opacity: 0 },
+  })
 
   return (
     <>
-      <StyledNav zIndex={zIndex}>
+      <StyledNav isOpen={isOpen} style={NavSpring}>
         <Link to="/">
           <MobileLogo src={logo} alt="Mattia Guzman" />
         </Link>

@@ -1,6 +1,7 @@
 import styled from "styled-components"
+import { animated } from "react-spring"
 
-const StyledNav = styled.nav`
+const StyledNav = styled(animated.nav)`
   position: absolute;
   top: 0;
   width: 100%;
@@ -11,24 +12,21 @@ const StyledNav = styled.nav`
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
   background-color: transparent;
-  z-index: ${props => props.zIndex};
+  z-index: 100;
 `
 
 const Logo = styled.div`
   justify-self: start;
 
   img {
-    width: 18rem;
-
-    @media (max-width: 980px) {
-      width: 16rem;
-    }
+    width: 14rem;
 
     @media (max-width: 860px) {
       width: 14rem;
     }
   }
 `
+
 const Navigation = styled.div`
   justify-self: center;
 

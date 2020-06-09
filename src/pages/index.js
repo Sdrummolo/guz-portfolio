@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
-import Layout from "../components/layout/layout"
 import SEO from "../components/utilities/seo"
+import { useSpring } from "react-spring"
 
 // Components
 import ExploreButton from "../components/UI/explore"
@@ -9,15 +9,23 @@ import Overlay from "../components/UI/overlay"
 import Slider from "../components/layout/Slider"
 
 const IndexPage = () => {
+  const ExploreSpring = useSpring({
+    delay: 1000,
+    opacity: 1,
+    from: {
+      opacity: 0,
+    },
+  })
+
   return (
-    <Layout overflowY>
+    <>
       <SEO title="Home" />
       <Overlay />
       <Slider />
       <Link to="/gallery">
-        <ExploreButton>Explore</ExploreButton>
+        <ExploreButton style={ExploreSpring}>Explore</ExploreButton>
       </Link>
-    </Layout>
+    </>
   )
 }
 

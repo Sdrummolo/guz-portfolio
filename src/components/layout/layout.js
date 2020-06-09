@@ -7,7 +7,7 @@ import Wrapper from "../utilities/wrapper"
 import Navbar from "./Navbar"
 import NavbarMobile from "../layout/NavbarMobile"
 
-const Layout = ({ children, zIndex }) => {
+const Layout = ({ children }) => {
   const { isMobile, isOpen } = useContext(PortfolioContext)
 
   return (
@@ -15,11 +15,7 @@ const Layout = ({ children, zIndex }) => {
       <GlobalStyle isOpen={isOpen} />
       <Wrapper>
         <main>{children}</main>
-        {isMobile ? (
-          <NavbarMobile zIndex={zIndex === undefined ? 100 : 0} /> // Removes zIndex from gallery because of a conflict with the lightBox component
-        ) : (
-          <Navbar zIndex={zIndex === undefined ? 100 : 0} /> // Removes zIndex from gallery because of a conflict with the lightBox component
-        )}
+        {isMobile ? <NavbarMobile /> : <Navbar />}
       </Wrapper>
     </>
   )
