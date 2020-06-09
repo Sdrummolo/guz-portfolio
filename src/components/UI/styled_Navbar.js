@@ -35,7 +35,7 @@ const Navigation = styled.div`
   ul {
     display: flex;
     margin: auto;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     font-weight: 700;
     text-transform: uppercase;
 
