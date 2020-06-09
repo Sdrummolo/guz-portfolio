@@ -292,6 +292,18 @@
     background-color 0.175s ease-out,
     -webkit-transform 0.225s cubic-bezier(0.8, 1.35, 0.75, 1.45);
 }
+
+@media (max-width: 768px) {
+  .awssld__bullets {
+    bottom: 2rem;
+  }
+
+  .awssld__bullets button {
+    width: 10px;
+    height: 10px;
+  }
+}
+
 .awssld__bullets button:hover {
   -webkit-transform: scale(1.2);
   transform: scale(1.2);

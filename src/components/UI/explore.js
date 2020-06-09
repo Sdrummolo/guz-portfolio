@@ -23,6 +23,10 @@ const ExploreButton = styled.button`
     background-color: #fff;
     color: #000;
   }
+
+  @media (max-width: 768px) {
+    font-size: 0.7rem;
+  }
 `
 
 export default ExploreButton
