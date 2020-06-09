@@ -10,7 +10,7 @@ import Slider from "../components/layout/Slider"
 
 const IndexPage = () => {
   return (
-    <Layout>
+    <Layout overflowY>
       <SEO title="Home" />
       <Overlay />
       <Slider />
