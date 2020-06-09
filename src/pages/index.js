@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import Layout from "../components/layout/layout"
 import SEO from "../components/utilities/seo"
 
@@ -13,7 +14,9 @@ const IndexPage = () => {
       <SEO title="Home" />
       <Overlay />
       <Slider />
-      <ExploreButton>Explore</ExploreButton>
+      <Link to="/gallery">
+        <ExploreButton>Explore</ExploreButton>
+      </Link>
     </Layout>
   )
 }
