@@ -20,7 +20,7 @@ const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     background-color: var(--bg-color);
     min-height: 100vh;
-    overflow-y: ${props => (props.isOpen ? "hidden" : "visible")};
+    overflow: ${props => (props.isOpen ? "hidden" : "visible")};
   }
 
   a {
