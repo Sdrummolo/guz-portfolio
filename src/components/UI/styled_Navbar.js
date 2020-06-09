@@ -53,7 +53,7 @@ const Socials = styled.div`
     justify-content: flex-end;
 
     img {
-      height: 15px;
+      height: 18px;
       margin: 0.5rem;
     }
   }
