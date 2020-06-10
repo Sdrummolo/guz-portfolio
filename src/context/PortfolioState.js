@@ -22,7 +22,7 @@ const PortfolioState = ({ children }) => {
   // load appropriate navbar on render
   useEffect(() => {
     handleResize()
-  }, [])
+  }, [handleResize])
 
   const getDeviceWidth = () => {
     if (window.innerWidth <= 768) {
