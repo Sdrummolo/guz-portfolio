@@ -25,7 +25,7 @@ const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     background-color: var(--bg-color);
     /* min-height: 100vh; */
-    min-height: -webkit-fill-available;
+    height: -webkit-fill-available;
     overflow: ${props => (props.isOpen ? "hidden" : "visible")};
   }
 
