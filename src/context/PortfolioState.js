@@ -11,6 +11,8 @@ const PortfolioState = ({ children }) => {
     getDeviceHeight()
   }
 
+  const getDeviceHeight = () => setHeight(window.innerHeight)
+
   // Listen for resize and scroll
   useEffect(() => {
     window.addEventListener("resize", handleResize)
@@ -31,8 +33,6 @@ const PortfolioState = ({ children }) => {
       setIsMobile(false)
     }
   }
-
-  const getDeviceHeight = () => setHeight(window.innerHeight)
 
   return (
     <PortfolioContext.Provider

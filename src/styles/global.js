@@ -20,7 +20,7 @@ const GlobalStyle = createGlobalStyle`
     font-size: 16px;
     font-family: Helvetica, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 400;
-    color: var(--white);
+    color: #fff;
     line-height: 1.2;
     -webkit-font-smoothing: antialiased;
     background-color: var(--bg-color);

@@ -6,7 +6,7 @@ const StyledNav = styled(animated.nav)`
   top: 0;
   background-color: transparent;
   height: 5rem;
-  padding: 0 1.5rem;
+  padding: 0 1rem;
   display: flex;
   justify-content: space-between;
   width: 100%;
