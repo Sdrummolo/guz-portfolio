@@ -11,7 +11,12 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
   }
 
-  body, html {
+  html {
+    height: -webkit-fill-available;
+    background-color: var(--bg-color);
+  }
+
+  body {
     font-size: 16px;
     font-family: Helvetica, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 400;
@@ -19,7 +24,8 @@ const GlobalStyle = createGlobalStyle`
     line-height: 1.2;
     -webkit-font-smoothing: antialiased;
     background-color: var(--bg-color);
-    height: -webkit-fill-available;
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
     overflow: ${props => (props.isOpen ? "hidden" : "visible")};
   }
 
