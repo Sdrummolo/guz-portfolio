@@ -13,10 +13,21 @@ const Layout = ({ children, path }) => {
 
   return (
     <>
-      <GlobalStyle isopen={isOpen} />
+      <GlobalStyle ispen={isOpen} />
       <Wrapper height={height}>
-        {isMobile ? <NavbarMobile path={path} /> : <Navbar path={path} />}
-        <main>{children}</main>
+        <Transition
+          config={{ duration: 500, delay: 200 }}
+          from={{ opacity: 0 }}
+          enter={{ opacity: 1 }}
+          leave={{ opacity: 0 }}
+        >
+          {() => style => (
+            <>
+              {isMobile ? <NavbarMobile path={path} /> : <Navbar path={path} />}
+              <main style={style}>{children}</main>
+            </>
+          )}
+        </Transition>
       </Wrapper>
     </>
   )
