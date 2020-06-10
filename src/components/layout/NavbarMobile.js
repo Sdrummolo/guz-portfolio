@@ -23,7 +23,7 @@ const NavbarMobile = ({ path }) => {
 
   return (
     <>
-      <StyledNav isOpen={isOpen} style={NavSpring} zIndex={zIndex}>
+      <StyledNav style={NavSpring} zindex={zIndex}>
         <Link to="/">
           {isOpen ? null : <MobileLogo src={logo} alt="Mattia Guzman" />}
         </Link>

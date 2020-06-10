@@ -13,7 +13,7 @@ const Layout = ({ children, path }) => {
 
   return (
     <>
-      <GlobalStyle isOpen={isOpen} />
+      <GlobalStyle isopen={isOpen} />
       <Wrapper height={height}>
         <Transition
           config={{ duration: 500, delay: 200 }}

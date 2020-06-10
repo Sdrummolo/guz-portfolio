@@ -26,7 +26,7 @@ const GlobalStyle = createGlobalStyle`
     background-color: var(--bg-color);
     /* min-height: 100vh; */
     min-height: -webkit-fill-available;
-    overflow: ${props => (props.isOpen ? "hidden" : "visible")};
+    overflow: ${props => (props.isopen ? "hidden" : "visible")};
     overflow-x: hidden;
   }
 
