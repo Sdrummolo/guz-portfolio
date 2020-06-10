@@ -19,11 +19,7 @@ const Logo = styled.div`
   justify-self: start;
 
   img {
-    width: 14rem;
-
-    @media (max-width: 860px) {
-      width: 14rem;
-    }
+    width: 12rem;
   }
 `
 
@@ -33,7 +29,7 @@ const Navigation = styled.div`
   ul {
     display: flex;
     margin: auto;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     font-weight: 700;
     text-transform: uppercase;
 

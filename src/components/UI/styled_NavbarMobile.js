@@ -23,7 +23,7 @@ const BurgerWrapper = styled.div`
 `
 
 const MobileLogo = styled.img`
-  max-width: 12rem;
+  max-width: 8rem;
 `
 
 export { StyledNav, BurgerWrapper, MobileLogo }

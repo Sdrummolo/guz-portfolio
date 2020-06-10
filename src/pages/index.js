@@ -10,6 +10,7 @@ import Slider from "../components/layout/Slider"
 
 const IndexPage = () => {
   const ExploreSpring = useSpring({
+    config: { duration: 700 },
     delay: 1000,
     opacity: 1,
     from: {

@@ -25,7 +25,7 @@ const NavbarMobile = ({ path }) => {
     <>
       <StyledNav isOpen={isOpen} style={NavSpring} zIndex={zIndex}>
         <Link to="/">
-          <MobileLogo src={logo} alt="Mattia Guzman" />
+          {isOpen ? null : <MobileLogo src={logo} alt="Mattia Guzman" />}
         </Link>
         <BurgerWrapper>
           <HamburgerSpin

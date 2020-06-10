@@ -1,4 +1,5 @@
 import React, { useContext } from "react"
+import { Transition } from "react-spring/renderprops"
 import GlobalStyle from "../../styles/global"
 import PortfolioContext from "../../context/PortfolioContext"
 
@@ -14,8 +15,19 @@ const Layout = ({ children, path }) => {
     <>
       <GlobalStyle isOpen={isOpen} />
       <Wrapper height={height}>
-        <main>{children}</main>
-        {isMobile ? <NavbarMobile path={path} /> : <Navbar path={path} />}
+        <Transition
+          config={{ duration: 500, delay: 200 }}
+          from={{ opacity: 0 }}
+          enter={{ opacity: 1 }}
+          leave={{ opacity: 0 }}
+        >
+          {() => style => (
+            <>
+              {isMobile ? <NavbarMobile path={path} /> : <Navbar path={path} />}
+              <main style={style}>{children}</main>
+            </>
+          )}
+        </Transition>
       </Wrapper>
     </>
   )

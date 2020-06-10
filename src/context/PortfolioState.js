@@ -12,7 +12,7 @@ const PortfolioState = ({ children }) => {
     return () => {
       window.removeEventListener("resize", handleResize)
     }
-  }, [])
+  }, [handleResize])
 
   const handleResize = () => {
     getDeviceWidth()
