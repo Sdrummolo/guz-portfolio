@@ -1,8 +1,8 @@
 import React from "react"
-import Layout from "../components/layout/layout"
 import SEO from "../components/utilities/seo"
 
 // Components
+import Layout from "../components/layout/layout"
 import Container from "../components/utilities/container"
 import SectionTitle from "../components/UI/sectionTitle"
 
