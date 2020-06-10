@@ -26,10 +26,10 @@ const ExploreButton = styled(animated.button)`
   }
 
   @media (max-width: 768px) {
-    font-size: 0.7rem;
-    margin-left: -61.765px;
-    margin-top: -25px;
-    padding: 0.8rem 1.9rem;
+    font-size: 0.8rem;
+    margin-left: -58.18px;
+    margin-top: -22.295px;
+    padding: 0.8rem 1.6rem;
     border: 2px solid #fff;
   }
 `

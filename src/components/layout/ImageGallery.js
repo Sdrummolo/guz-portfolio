@@ -49,7 +49,7 @@ const ImageGallery = () => {
   }, [])
 
   return (
-    <SRLWrapper options={options} style={{ zIndex: 200 }}>
+    <SRLWrapper options={options}>
       <GalleryContainer>
         {data.allFile.edges.map((image, i) => {
           return (

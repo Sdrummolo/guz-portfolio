@@ -21,7 +21,7 @@ const IndexPage = () => {
     <>
       <SEO title="Home" />
       <Overlay />
-      <Slider />
+      {/* <Slider /> */}
       <Link to="/gallery">
         <ExploreButton style={ExploreSpring}>Explore</ExploreButton>
       </Link>
