@@ -10,7 +10,7 @@ const StyledNav = styled(animated.nav)`
   display: flex;
   justify-content: space-between;
   width: 100%;
-  z-index: 100;
+  z-index: ${props => props.zIndex};
 
   /* Logo */
   a {

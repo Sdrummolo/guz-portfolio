@@ -7,7 +7,7 @@ import Wrapper from "../utilities/wrapper"
 import Navbar from "./Navbar"
 import NavbarMobile from "../layout/NavbarMobile"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, path }) => {
   const { isMobile, isOpen, height } = useContext(PortfolioContext)
 
   return (
@@ -15,7 +15,7 @@ const Layout = ({ children }) => {
       <GlobalStyle isOpen={isOpen} />
       <Wrapper height={height}>
         <main>{children}</main>
-        {isMobile ? <NavbarMobile /> : <Navbar />}
+        {isMobile ? <NavbarMobile path={path} /> : <Navbar path={path} />}
       </Wrapper>
     </>
   )

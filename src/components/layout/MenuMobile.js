@@ -1,20 +1,23 @@
-import React from "react"
+import React, { useContext } from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import { useSpring } from "react-spring"
 import instagram from "../../images/instagram_dark.png"
 import linkedin from "../../images/linkedin_dark.png"
+import PortfolioContext from "../../context/PortfolioContext"
 
 // Components
 import { MenuContainer, Socials } from "../UI/styled_MenuMobile"
 
 const MenuMobile = ({ isOpen, setIsOpen }) => {
+  const { height } = useContext(PortfolioContext)
+
   const MenuSpring = useSpring({
     transform: isOpen ? "translateX(0)" : "translateX(100vw)",
   })
 
   return (
-    <MenuContainer style={MenuSpring}>
+    <MenuContainer style={MenuSpring} height={height}>
       <nav>
         <ul>
           <li>

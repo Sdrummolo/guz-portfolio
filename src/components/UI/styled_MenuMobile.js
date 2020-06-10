@@ -8,7 +8,7 @@ const MenuContainer = styled(animated.div)`
   left: 0;
   right: 0;
   bottom: 0;
-  height: 100%;
+  height: ${props => `${props.height}px`};
   width: 100%;
   z-index: 50;
   background-color: #fff;
