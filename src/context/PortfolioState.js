@@ -6,6 +6,11 @@ const PortfolioState = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false)
   const [height, setHeight] = useState(null)
 
+  const handleResize = () => {
+    getDeviceWidth()
+    getDeviceHeight()
+  }
+
   // Listen for resize and scroll
   useEffect(() => {
     window.addEventListener("resize", handleResize)
@@ -13,11 +18,6 @@ const PortfolioState = ({ children }) => {
       window.removeEventListener("resize", handleResize)
     }
   }, [handleResize])
-
-  const handleResize = () => {
-    getDeviceWidth()
-    getDeviceHeight()
-  }
 
   // load appropriate navbar on render
   useEffect(() => {
