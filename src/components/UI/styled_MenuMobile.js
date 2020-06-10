@@ -9,7 +9,6 @@ const MenuContainer = styled(animated.div)`
   right: 0;
   bottom: 0;
   height: 100%;
-  height: -webkit-fill-available;
   width: 100%;
   z-index: 50;
   background-color: #fff;

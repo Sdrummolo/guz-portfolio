@@ -8,15 +8,15 @@ import Navbar from "./Navbar"
 import NavbarMobile from "../layout/NavbarMobile"
 
 const Layout = ({ children }) => {
-  const { isMobile, isOpen } = useContext(PortfolioContext)
+  const { isMobile, isOpen, height } = useContext(PortfolioContext)
 
   return (
     <>
       <GlobalStyle isOpen={isOpen} />
-      {/* <Wrapper> */}
-      <main>{children}</main>
-      {isMobile ? <NavbarMobile /> : <Navbar />}
-      {/* </Wrapper> */}
+      <Wrapper height={height}>
+        <main>{children}</main>
+        {isMobile ? <NavbarMobile /> : <Navbar />}
+      </Wrapper>
     </>
   )
 }
