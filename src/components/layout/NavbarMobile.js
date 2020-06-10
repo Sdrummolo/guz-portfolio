@@ -20,6 +20,7 @@ const NavbarMobile = ({ path }) => {
 
   let zIndex = 100
   if (path === "/gallery/" && !isOpen) zIndex = 0
+
   return (
     <>
       <StyledNav isOpen={isOpen} style={NavSpring} zIndex={zIndex}>

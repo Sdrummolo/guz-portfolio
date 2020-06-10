@@ -10,7 +10,7 @@ const MenuContainer = styled(animated.div)`
   bottom: 0;
   height: ${props => `${props.height}px`};
   width: 100%;
-  z-index: 50;
+  z-index: 99;
   background-color: #fff;
 
   nav {

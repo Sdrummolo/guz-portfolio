@@ -12,9 +12,7 @@ const Gallery = () => {
       <SEO title="Gallery" />
       <Container>
         <SimpleReactLightbox>
-          <div style={{ zIndex: 210 }}>
-            <ImageGallery />
-          </div>
+          <ImageGallery />
         </SimpleReactLightbox>
       </Container>
     </>
