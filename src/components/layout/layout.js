@@ -13,10 +13,10 @@ const Layout = ({ children }) => {
   return (
     <>
       <GlobalStyle isOpen={isOpen} />
-      <Wrapper>
-        <main>{children}</main>
-        {isMobile ? <NavbarMobile /> : <Navbar />}
-      </Wrapper>
+      {/* <Wrapper> */}
+      <main>{children}</main>
+      {isMobile ? <NavbarMobile /> : <Navbar />}
+      {/* </Wrapper> */}
     </>
   )
 }
