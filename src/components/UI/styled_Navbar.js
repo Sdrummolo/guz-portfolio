@@ -12,7 +12,7 @@ const StyledNav = styled(animated.nav)`
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
   background-color: transparent;
-  z-index: 100;
+  z-index: ${({ islightboxopen }) => (islightboxopen ? 0 : 100)};
 `
 
 const Logo = styled.div`

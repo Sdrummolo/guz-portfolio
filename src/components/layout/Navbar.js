@@ -1,9 +1,10 @@
-import React from "react"
+import React, { useContext } from "react"
 import { useSpring } from "react-spring"
 import { Link } from "gatsby"
 import logo from "../../images/logo_large.png"
 import instagram from "../../images/instagram_white.png"
 import linkedin from "../../images/linkedin_white.png"
+import PortfolioContext from "../../context/PortfolioContext"
 
 // Components
 import { StyledNav, Logo, Navigation, Socials } from "../UI/styled_Navbar"
@@ -15,8 +16,10 @@ const Navbar = () => {
     from: { opacity: 0 },
   })
 
+  const { isLightboxOpen } = useContext(PortfolioContext)
+
   return (
-    <StyledNav style={NavSpring}>
+    <StyledNav style={NavSpring} islightboxopen={isLightboxOpen}>
       <Logo>
         <Link to="/">
           <img src={logo} alt="Mattia Guzman" />

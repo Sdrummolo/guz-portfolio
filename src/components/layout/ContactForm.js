@@ -5,12 +5,13 @@ import { StyledForm } from "../UI/styled_ContactForm"
 
 const ContactForm = () => {
   return (
-    <StyledForm>
-      <input type="text" placeholder="Name" />
-      <input type="email" placeholder="Email" />
-      <input type="text" placeholder="Subject" />
-      <textarea placeholder="Message" />
-      <button>Submit</button>
+    <StyledForm method="POST" data-netlify="true">
+      <input type="hidden" name="contact-form" value="Contact Form" />
+      <input type="text" name="name" placeholder="Name" />
+      <input type="email" name="email" placeholder="Email" />
+      <input type="text" name="subject" placeholder="Subject" />
+      <textarea placeholder="Message" name="message" />
+      <button type="submit">Submit</button>
     </StyledForm>
   )
 }
