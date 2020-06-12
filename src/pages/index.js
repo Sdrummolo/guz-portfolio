@@ -5,7 +5,6 @@ import { useSpring } from "react-spring"
 
 // Components
 import ExploreButton from "../components/UI/explore"
-import Overlay from "../components/UI/overlay"
 import Slider from "../components/layout/Slider"
 
 const IndexPage = () => {
@@ -21,7 +20,6 @@ const IndexPage = () => {
   return (
     <>
       <SEO title="Home" />
-      <Overlay />
       <Slider />
       <Link to="/gallery">
         <ExploreButton style={ExploreSpring}>Gallery</ExploreButton>
