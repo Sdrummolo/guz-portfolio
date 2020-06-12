@@ -24,7 +24,7 @@ const IndexPage = () => {
       <Overlay />
       <Slider />
       <Link to="/gallery">
-        <ExploreButton style={ExploreSpring}>Explore</ExploreButton>
+        <ExploreButton style={ExploreSpring}>Gallery</ExploreButton>
       </Link>
     </>
   )

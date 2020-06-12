@@ -5,6 +5,6 @@ import styled from "styled-components"
 const Wrapper = styled.div`
   position: relative;
   min-height: ${props => `${props.height}px`};
-  overflow: hidden;
+  overflow-y: hidden;
 `
 export default Wrapper

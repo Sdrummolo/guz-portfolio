@@ -8,7 +8,7 @@ import linkedin from "../../images/linkedin_white.png"
 // Components
 import { StyledNav, Logo, Navigation, Socials } from "../UI/styled_Navbar"
 
-const Navbar = ({ path }) => {
+const Navbar = () => {
   const NavSpring = useSpring({
     config: { duration: 1000 },
     opacity: 1,
@@ -16,7 +16,7 @@ const Navbar = ({ path }) => {
   })
 
   return (
-    <StyledNav style={NavSpring} path={path}>
+    <StyledNav style={NavSpring}>
       <Logo>
         <Link to="/">
           <img src={logo} alt="Mattia Guzman" />

@@ -10,14 +10,14 @@ import PortfolioContext from "../../context/PortfolioContext"
 import { MenuContainer, Socials } from "../UI/styled_MenuMobile"
 
 const MenuMobile = ({ isOpen, setIsOpen }) => {
-  const { height } = useContext(PortfolioContext)
+  const { height, scrolled } = useContext(PortfolioContext)
 
   const MenuSpring = useSpring({
     transform: isOpen ? "translateX(0)" : "translateX(100vw)",
   })
 
   return (
-    <MenuContainer style={MenuSpring} height={height}>
+    <MenuContainer style={MenuSpring} height={height} scrolled={scrolled}>
       <nav>
         <ul>
           <li>

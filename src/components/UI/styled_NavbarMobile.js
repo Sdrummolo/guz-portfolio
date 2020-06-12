@@ -5,12 +5,13 @@ const StyledNav = styled(animated.nav)`
   position: absolute;
   top: 0;
   background-color: transparent;
+  margin-top: ${({ isopen, scrolled }) => (isopen ? `${scrolled}px` : 0)};
   height: 5rem;
   padding: 0 1rem;
   display: flex;
   justify-content: space-between;
   width: 100%;
-  z-index: ${props => props.zindex};
+  z-index: 100;
 
   /* Logo */
   a {

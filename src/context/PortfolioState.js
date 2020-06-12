@@ -5,19 +5,27 @@ const PortfolioState = ({ children }) => {
   const [isMobile, setIsMobile] = useState(null)
   const [isOpen, setIsOpen] = useState(false)
   const [height, setHeight] = useState(null)
+  const [scrolled, setScrolled] = useState(null)
 
   const handleResize = () => {
     getDeviceWidth()
     getDeviceHeight()
   }
 
+  const handleScroll = () => {
+    setScrolled(window.scrollY)
+  }
+
   const getDeviceHeight = () => setHeight(window.innerHeight)
 
-  // Listen for resize and scroll
+  // Listen for resize
   useEffect(() => {
     window.addEventListener("resize", handleResize)
+    window.addEventListener("scroll", handleScroll)
+
     return () => {
       window.removeEventListener("resize", handleResize)
+      window.removeEventListener("scroll", handleScroll)
     }
   }, [handleResize])
 
@@ -36,7 +44,13 @@ const PortfolioState = ({ children }) => {
 
   return (
     <PortfolioContext.Provider
-      value={{ isMobile: isMobile, isOpen: isOpen, height: height, setIsOpen }}
+      value={{
+        isMobile: isMobile,
+        isOpen: isOpen,
+        height: height,
+        scrolled: scrolled,
+        setIsOpen,
+      }}
     >
       {children}
     </PortfolioContext.Provider>

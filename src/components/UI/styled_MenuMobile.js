@@ -4,11 +4,12 @@ import { animated } from "react-spring"
 const MenuContainer = styled(animated.div)`
   display: flex;
   position: absolute;
+  margin-top: ${({ scrolled }) => `${scrolled}px`};
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  height: ${props => `${props.height}px`};
+  height: ${({ height }) => `${height}px`};
   width: 100%;
   z-index: 99;
   background-color: #fff;

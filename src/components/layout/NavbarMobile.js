@@ -9,8 +9,8 @@ import { HamburgerSpin } from "react-animated-burgers"
 import { StyledNav, BurgerWrapper, MobileLogo } from "../UI/styled_NavbarMobile"
 import MenuMobile from "./MenuMobile"
 
-const NavbarMobile = ({ path }) => {
-  const { isOpen, setIsOpen } = useContext(PortfolioContext)
+const NavbarMobile = () => {
+  const { isOpen, setIsOpen, scrolled } = useContext(PortfolioContext)
 
   const NavSpring = useSpring({
     config: { duration: 1000 },
@@ -18,12 +18,9 @@ const NavbarMobile = ({ path }) => {
     from: { opacity: 0 },
   })
 
-  let zIndex = 100
-  if (path === "/gallery/" && !isOpen) zIndex = 0
-
   return (
     <>
-      <StyledNav style={NavSpring} zindex={zIndex}>
+      <StyledNav style={NavSpring} scrolled={scrolled} isopen={isOpen}>
         <Link to="/">
           {isOpen ? null : <MobileLogo src={logo} alt="Mattia Guzman" />}
         </Link>

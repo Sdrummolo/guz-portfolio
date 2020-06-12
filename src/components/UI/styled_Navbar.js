@@ -12,7 +12,7 @@ const StyledNav = styled(animated.nav)`
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
   background-color: transparent;
-  z-index: ${props => (props.path === "/gallery/" ? 0 : 100)};
+  z-index: 100;
 `
 
 const Logo = styled.div`

@@ -4,17 +4,16 @@ import GlobalStyle from "../../styles/global"
 import PortfolioContext from "../../context/PortfolioContext"
 
 // Components
-import Wrapper from "../utilities/wrapper"
 import Navbar from "./Navbar"
 import NavbarMobile from "../layout/NavbarMobile"
 
-const Layout = ({ children, path }) => {
-  const { isMobile, isOpen, height } = useContext(PortfolioContext)
+const Layout = ({ children }) => {
+  const { isMobile, isOpen } = useContext(PortfolioContext)
 
   return (
     <>
-      <GlobalStyle ispen={isOpen} />
-      <Transition // Page transition
+      <GlobalStyle isopen={isOpen} />
+      <Transition
         config={{ duration: 500, delay: 200 }}
         from={{ opacity: 0 }}
         enter={{ opacity: 1 }}
@@ -22,10 +21,8 @@ const Layout = ({ children, path }) => {
       >
         {() => style => (
           <>
-            <Wrapper height={height}>
-              {isMobile ? <NavbarMobile path={path} /> : <Navbar path={path} />}
-              <main style={style}>{children}</main>
-            </Wrapper>
+            {isMobile ? <NavbarMobile /> : <Navbar />}
+            <main style={style}>{children}</main>
           </>
         )}
       </Transition>
