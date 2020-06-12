@@ -11,7 +11,7 @@ const StyledNav = styled(animated.nav)`
   display: flex;
   justify-content: space-between;
   width: 100%;
-  z-index: 100;
+  z-index: ${({ islightboxopen }) => (islightboxopen ? 0 : 100)};
 
   /* Logo */
   a {

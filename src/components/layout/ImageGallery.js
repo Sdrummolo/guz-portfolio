@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useContext } from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 import Aos from "aos"
@@ -7,6 +7,7 @@ import { SRLWrapper } from "simple-react-lightbox"
 
 // Components
 import { GalleryContainer, ImagePreview } from "../UI/styled_ImageGallery"
+import PortfolioContext from "../../context/PortfolioContext"
 
 const options = {
   settings: {
@@ -44,12 +45,19 @@ const ImageGallery = () => {
     }
   `)
 
+  const { isLightboxOpen, setIsLightboxOpen } = useContext(PortfolioContext)
+
   useEffect(() => {
     Aos.init({ duration: 700 })
   }, [])
 
+  const callbacks = {
+    onLightboxOpened: () => setIsLightboxOpen(true),
+    onLightboxClosed: () => setIsLightboxOpen(false),
+  }
+
   return (
-    <SRLWrapper options={options}>
+    <SRLWrapper options={options} callbacks={callbacks}>
       <GalleryContainer>
         {data.allFile.edges.map((image, i) => {
           return (

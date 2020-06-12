@@ -6,6 +6,7 @@ const PortfolioState = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false)
   const [height, setHeight] = useState(null)
   const [scrolled, setScrolled] = useState(null)
+  const [isLightboxOpen, setIsLightboxOpen] = useState(null)
 
   const handleResize = () => {
     getDeviceWidth()
@@ -49,7 +50,9 @@ const PortfolioState = ({ children }) => {
         isOpen: isOpen,
         height: height,
         scrolled: scrolled,
+        isLightboxOpen: isLightboxOpen,
         setIsOpen,
+        setIsLightboxOpen,
       }}
     >
       {children}

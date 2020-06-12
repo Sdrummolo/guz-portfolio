@@ -10,7 +10,9 @@ import { StyledNav, BurgerWrapper, MobileLogo } from "../UI/styled_NavbarMobile"
 import MenuMobile from "./MenuMobile"
 
 const NavbarMobile = () => {
-  const { isOpen, setIsOpen, scrolled } = useContext(PortfolioContext)
+  const { isOpen, setIsOpen, scrolled, isLightboxOpen } = useContext(
+    PortfolioContext
+  )
 
   const NavSpring = useSpring({
     config: { duration: 1000 },
@@ -20,7 +22,12 @@ const NavbarMobile = () => {
 
   return (
     <>
-      <StyledNav style={NavSpring} scrolled={scrolled} isopen={isOpen}>
+      <StyledNav
+        style={NavSpring}
+        scrolled={scrolled}
+        isopen={isOpen}
+        islightboxopen={isLightboxOpen}
+      >
         <Link to="/">
           {isOpen ? null : <MobileLogo src={logo} alt="Mattia Guzman" />}
         </Link>
