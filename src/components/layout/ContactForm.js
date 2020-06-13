@@ -25,7 +25,7 @@ const ContactForm = () => {
   }
 
   const handleSubmit = e => {
-    fetch("/contact/", {
+    fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", ...formData }),
@@ -37,9 +37,9 @@ const ContactForm = () => {
   }
 
   return (
-    <StyledForm
+    <form
       name="contact"
-      method="post"
+      method="POST"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
       onSubmit={handleSubmit}
@@ -78,7 +78,7 @@ const ContactForm = () => {
       />
 
       <button type="submit">Submit</button>
-    </StyledForm>
+    </form>
   )
 }
 
