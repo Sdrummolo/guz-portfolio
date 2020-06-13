@@ -37,9 +37,9 @@ const ContactForm = () => {
   }
 
   return (
-    <form
+    <StyledForm
       name="contact"
-      method="POST"
+      method="post"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
       onSubmit={handleSubmit}
@@ -78,7 +78,7 @@ const ContactForm = () => {
       />
 
       <button type="submit">Submit</button>
-    </form>
+    </StyledForm>
   )
 }
 
