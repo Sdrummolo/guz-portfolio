@@ -37,7 +37,7 @@ const ContactForm = () => {
   }
 
   return (
-    <StyledForm
+    <form
       name="contact"
       method="POST"
       data-netlify="true"
@@ -78,7 +78,7 @@ const ContactForm = () => {
       />
 
       <button type="submit">Submit</button>
-    </StyledForm>
+    </form>
   )
 }
 
