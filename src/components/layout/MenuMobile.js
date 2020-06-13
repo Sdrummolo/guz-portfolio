@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 import { useSpring } from "react-spring"
 import instagram from "../../images/instagram_dark.png"
 import linkedin from "../../images/linkedin_dark.png"
+import email from "../../images/email_dark.png"
 import PortfolioContext from "../../context/PortfolioContext"
 
 // Components
@@ -60,6 +61,15 @@ const MenuMobile = ({ isOpen, setIsOpen }) => {
                 rel="noreferrer"
               >
                 <img src={linkedin} alt="Linkedin" />
+              </a>
+            </li>
+            <li>
+              <a href="mailto: mattiaguzman@gmail.com" rel="noreferrer">
+                <img
+                  src={email}
+                  alt="Email"
+                  style={{ height: 22, marginTop: 10 }}
+                />
               </a>
             </li>
           </ul>

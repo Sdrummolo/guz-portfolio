@@ -33,8 +33,17 @@ const Navigation = styled.div`
     font-weight: 700;
     text-transform: uppercase;
 
+    &:hover li {
+      opacity: 0.5;
+    }
+
+    & li:hover {
+      opacity: 1;
+    }
+
     li {
       margin: 0 30px;
+      transition: all 0.2s;
     }
   }
 `
@@ -45,6 +54,18 @@ const Socials = styled.div`
   ul {
     display: flex;
     justify-content: flex-end;
+
+    &:hover li {
+      opacity: 0.5;
+    }
+
+    & li:hover {
+      opacity: 1;
+    }
+
+    li {
+      transition: all 0.2s;
+    }
 
     img {
       height: 18px;

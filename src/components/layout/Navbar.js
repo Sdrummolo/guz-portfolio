@@ -3,6 +3,7 @@ import { useSpring } from "react-spring"
 import { Link } from "gatsby"
 import logo from "../../images/logo_large.png"
 import instagram from "../../images/instagram_white.png"
+import email from "../../images/email_white.png"
 import linkedin from "../../images/linkedin_white.png"
 import PortfolioContext from "../../context/PortfolioContext"
 
@@ -61,6 +62,11 @@ const Navbar = () => {
               rel="noreferrer"
             >
               <img src={linkedin} alt="Linkedin" />
+            </a>
+          </li>
+          <li>
+            <a href="mailto: mattiaguzman@gmail.com" rel="noreferrer">
+              <img src={email} alt="Email" style={{ height: 17 }} />
             </a>
           </li>
         </ul>

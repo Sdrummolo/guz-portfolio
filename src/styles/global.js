@@ -31,11 +31,15 @@ const GlobalStyle = createGlobalStyle`
 
   a {
       text-decoration: none;
-      color: var(--light-grey)
+      color: #fff;
     }
 
   ul {
     list-style: none;
+  }
+
+  textarea, input, button, select { font-family: 
+    inherit; font-size: inherit; 
   }
 `
 

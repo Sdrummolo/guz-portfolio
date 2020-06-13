@@ -42,7 +42,7 @@ const Socials = styled.div`
   position: absolute;
   bottom: 1.5rem;
   left: 50%;
-  margin-left: -41px;
+  margin-left: -59.475px;
 
   ul {
     display: flex;
