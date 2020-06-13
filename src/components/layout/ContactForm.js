@@ -25,7 +25,7 @@ const ContactForm = () => {
   }
 
   const handleSubmit = e => {
-    fetch("/gallery/", {
+    fetch("/contact/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", ...formData }),
