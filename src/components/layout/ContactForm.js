@@ -13,17 +13,47 @@ const ContactForm = () => {
 
   const handleSubmit = e => e.preventDefault()
 
+  const handleChange = e => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    })
+  }
+
   return (
-    <StyledForm
-      name="contact"
-      method="POST"
-      data-netlify="true"
-      onSubmit={handleSubmit}
-    >
-      <input type="text" name="name" placeholder="Name" />
-      <input type="email" name="email" placeholder="Email" />
-      <input type="text" name="subject" placeholder="Subject" />
-      <textarea placeholder="Message" name="message" />
+    <StyledForm name="contact" method="POST" data-netlify="true">
+      <input
+        type="text"
+        name="name"
+        placeholder="Name"
+        value={formData.name}
+        onChange={handleChange}
+        required
+      />
+      <input
+        type="email"
+        name="email"
+        placeholder="Email"
+        value={formData.email}
+        onChange={handleChange}
+        required
+      />
+      <input
+        type="text"
+        name="subject"
+        placeholder="Subject"
+        value={formData.subject}
+        onChange={handleChange}
+        required
+      />
+      <textarea
+        placeholder="Message"
+        name="message"
+        value={formData.message}
+        required
+        onChange={handleChange}
+      />
+
       <button type="submit">Submit</button>
     </StyledForm>
   )
