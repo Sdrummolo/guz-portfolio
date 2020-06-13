@@ -11,7 +11,23 @@ const ContactForm = () => {
     message: "",
   })
 
-  const handleSubmit = e => e.preventDefault()
+  const encode = data => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&")
+  }
+
+  const handleSubmit = e => {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", formData }),
+    })
+      .then(() => alert("Success!"))
+      .catch(error => alert(error))
+
+    e.preventDefault()
+  }
 
   const handleChange = e => {
     setFormData({
@@ -21,8 +37,13 @@ const ContactForm = () => {
   }
 
   return (
-    <StyledForm name="contact" method="POST" data-netlify="true">
-      {/* <input type="hidden" name="form-name" value="contact" /> */}
+    <StyledForm
+      name="contact"
+      method="POST"
+      data-netlify="true"
+      onSubmit={handleSubmit}
+    >
+      <input type="hidden" name="form-name" value="contact" />
       <input
         type="text"
         name="name"
