@@ -17,6 +17,13 @@ const ContactForm = () => {
       .join("&")
   }
 
+  const handleChange = e => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    })
+  }
+
   const handleSubmit = e => {
     fetch("/", {
       method: "POST",
@@ -29,18 +36,12 @@ const ContactForm = () => {
     e.preventDefault()
   }
 
-  const handleChange = e => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    })
-  }
-
   return (
     <StyledForm
       name="contact"
       method="POST"
       data-netlify="true"
+      data-netlify-honeypot="bot-field"
       onSubmit={handleSubmit}
     >
       <input type="hidden" name="form-name" value="contact" />
