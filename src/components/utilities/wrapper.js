@@ -4,7 +4,8 @@ import styled from "styled-components"
 // Position relative is required in order to work
 const Wrapper = styled.div`
   position: relative;
-  min-height: ${props => `${props.height}px`};
-  overflow-y: hidden;
+  min-height: ${({ height }) => `${height}px`};
+  width: 100%;
+  overflow-x: hidden;
 `
 export default Wrapper

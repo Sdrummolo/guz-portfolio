@@ -6,9 +6,10 @@ import PortfolioContext from "../../context/PortfolioContext"
 // Components
 import Navbar from "./Navbar"
 import NavbarMobile from "../layout/NavbarMobile"
+import Wrapper from "../utilities/wrapper"
 
 const Layout = ({ children }) => {
-  const { isMobile, isOpen } = useContext(PortfolioContext)
+  const { isMobile, isOpen, height } = useContext(PortfolioContext)
 
   return (
     <>
@@ -21,8 +22,10 @@ const Layout = ({ children }) => {
       >
         {() => style => (
           <>
-            {isMobile ? <NavbarMobile /> : <Navbar />}
-            <main style={style}>{children}</main>
+            <Wrapper height={height}>
+              {isMobile ? <NavbarMobile /> : <Navbar />}
+              <main style={style}>{children}</main>
+            </Wrapper>
           </>
         )}
       </Transition>
