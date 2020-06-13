@@ -22,9 +22,11 @@ const ContactForm = () => {
 
   return (
     <StyledForm name="contact" method="POST" data-netlify="true">
-      <input type="hidden" name="form-name" value="contact" />
+      {/* <input type="hidden" name="form-name" value="contact" /> */}
       <input
         type="text"
+        name="name"
+        placeholder="Name"
         value={formData.name}
         onChange={handleChange}
         required
