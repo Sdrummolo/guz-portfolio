@@ -10,7 +10,6 @@ const MenuContainer = styled(animated.div)`
   right: 0;
   bottom: 0;
   min-height: ${({ height }) => `${height}px`};
-  max-height: 100vh;
   width: 100%;
   z-index: 99;
   background-color: #fff;
