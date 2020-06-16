@@ -45,7 +45,7 @@ const ImageGallery = () => {
     }
   `)
 
-  const { isLightboxOpen, setIsLightboxOpen } = useContext(PortfolioContext)
+  const { setIsLightboxOpen } = useContext(PortfolioContext)
 
   useEffect(() => {
     Aos.init({ duration: 700 })

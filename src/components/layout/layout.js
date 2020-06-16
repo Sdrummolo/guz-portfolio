@@ -13,7 +13,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <GlobalStyle isopen={isOpen} />
+      <GlobalStyle isopen={isOpen} height={height} />
       <Transition
         config={{ duration: 500, delay: 200 }}
         from={{ opacity: 0 }}

@@ -12,7 +12,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
   html {
-    height: -webkit-fill-available;
+    min-height: ${({ height }) => height}; 
+    max-height: 100vh;
     background-color: var(--bg-color);
   }
 
