@@ -12,13 +12,12 @@ const GlobalStyle = createGlobalStyle`
   }
 
   html {
-    min-height: ${({ height }) => height}; 
-    max-height: 100vh;
     background-color: var(--bg-color);
   }
 
   body {
     font-size: 16px;
+    height: -webkit-fill-available;
     font-family: Helvetica, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 400;
     color: #fff;
